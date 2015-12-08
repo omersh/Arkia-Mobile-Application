@@ -1,0 +1,457 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+body{
+	@import url(http://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+	font-family: 'Open Sans Hebrew', sans-serif;
+direction: rtl;
+    font-size: 16px;}
+a{ text-decoration:none;}
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+.mainFrame{ margin-top:46px;}
+
+input{ margin:10px 0;
+border-bottom:1px solid #cdcdcf; 
+border-top:0px; 
+border-left:0px; 
+border-right:0px; 
+text-align:center; 
+color:#000; padding:3px 0; font-size:18px;font-family: 'Open Sans Hebrew', sans-serif;    width: 100%;}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	width: 100%;
+	clear: none;
+	float: none;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+/*HEADER*/
+
+.header{  height:46px; background:#113147; position:fixed; z-index:9999;}
+.Logo { width:39%; margin:5px auto 0; float:left; text-align:center;}
+.menu { float:right; width:27%; text-align:right;margin-top: 8px;}
+.menu img{ margin-right:10px;}
+.HeaderLogin { width: 33%;  float: left; text-align: right;}
+.HeaderLogin a{ color:#00a6e7;    font-size: 14px;}
+.loginBtn{font-size: 14px;}
+.HeaderLogin .loginBtn{ text-align:center; margin-left:10px;    float: left;margin-top: 3px;}
+.phoneIcon{ width:10%; float:left; margin-left:1%;}
+.backIcon{ width:10%; float:right; margin-right:1%}
+
+/*SIDE MENU*/
+.side_menu {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+  box-shadow: -3px 0 16px 0 #000000;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top:46px;
+  width: 80%;
+  z-index: 999;
+}
+#menu_cross {
+	float: left;
+	cursor: pointer; position:absolute; left:10px; top:10px;
+}
+ul.side_menu_list {
+	width: 100%; margin:0; padding:0;
+	float: right;
+}
+ul.side_menu_list li {
+	border-bottom: 1px solid #bbbbbb;
+	float: right;
+	width: 100%; list-style:none;
+	    line-height: 52px;
+}
+ul.side_menu_list li a, ul.side_menu_list li a:visited{ color:#757575;}
+
+.menuIcon{ margin-left: 13px;    border-left: 1px solid #00a7e7;    line-height: 52px;    float: right;    width: 60px;    height: 52px;}
+.menu1{ background:url(../images/menu1.jpg) no-repeat center 5px #f2f2f2;}
+.menu2{ background:url(../images/menu2.jpg) no-repeat center 5px #f2f2f2;}
+.menu3{ background:url(../images/menu3.jpg) no-repeat center 5px #f2f2f2;}
+.menu4{ background:url(../images/menu4.jpg) no-repeat center 5px #f2f2f2;}
+.menu5{ background:url(../images/menu5.jpg) no-repeat center 5px #f2f2f2;}
+.menu6{ background:url(../images/menu6.jpg) no-repeat center 5px #f2f2f2;}
+.menu7{ background:url(../images/menu7.jpg) no-repeat center 5px #f2f2f2;}
+
+
+/*HOME*/
+.home{background:#113147;}
+.OnSale {position: relative;}
+.OnSale img{ width:100%; height:auto;}
+.onSaleShadow { background:url(../images/HomeOnSaleBlackBG.png) repeat-x; height:69px; position:absolute; bottom:0;}
+.SaleTitle {
+	position: absolute;
+	float: right;
+	margin-top: 20px;
+	background: #00a6e7;
+	height: 21px; font-size:17px; text-align:right; padding-right:5px; line-height:19px;
+	width: 96px;
+	color: #fff;
+	right: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.48);
+}
+.SaleName{   font-size: 36px;
+  position: absolute;
+  bottom: 23px;
+  text-align: center;
+  width: 100%;
+  }
+  .SaleName a{ text-shadow: 1px 1px 1px rgba(0,0,0,0.48);color: #fff;text-decoration:none;}
+ .SalePrice{   font-size: 17px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.48);
+  position: absolute;
+  bottom: 7px;
+  text-align: center;
+  width: 100%;
+  color: #fff;}
+.HomeIcon { text-align:center; font-size: 17px;
+  padding:20px 0; border-bottom:2px solid #44779a;  width: 80%;
+  margin: 0 auto;
+}
+.noBorder{ border:0px;}
+.HomeIcon a {text-shadow: 1px 1px 1px rgba(0,0,0,0.48);  color: #fff; text-decoration:none;}
+.topGreyTitle{ background:#e4e4e4; height:29px; border-top:1px solid #fff; border-bottom:1px solid #c4c4c4; margin-bottom:10px; text-align:center;}
+.topGreyTitle h1{ font-size:19px; color:#282828;  margin:0; font-weight:400; width:78%; margin:0 auto; float:left;}
+.topText{ text-align:center;}
+.blueText{ color:#00a7e8;}
+.topCenterText{ text-align:center; width:88%; padding:0 6%;}
+.topCenterTextTopSpace{ text-align:center; margin-top:26px; width:88%; padding:0 6%;}
+.BlueIcon{ margin:0 0 20px 0;}
+
+/*ORDER SEARCH*/
+.footerBtn{ background:#e4e4e4; height:75px; margin-top:15px;}
+.shortPage .footerBtn{ background:#e4e4e4; height:75px; margin-top:15px; position:absolute; bottom:0;}
+.continueBtn{margin:21px auto 0;color:#fff; font-size:24px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background:url(../images/nextIcon.png) no-repeat 10px center #f47920; text-align:center;  width:70%;    height: 37px;}
+
+/*UPDATE DETAILS*/
+.update_details{}
+.mainCon{ width:94%; padding:0 3%;}
+.updateBtn{margin:21px auto 0;color:#fff; font-size:24px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background:url(../images/updateIcon.png) no-repeat 10px center #f47920; text-align:center;  width:70%;    height: 37px;}
+.mainCon h2{ color:#000; font-size:24px; font-weight:normal; line-height: 24px; margin:0 0 20px 0;}
+.mainCon h3{ color:#00a6e7; font-size:24px; font-weight:normal;    line-height: 24px; margin:0;}
+#update_details li{ float:right; width:22%; list-style:none; margin:0 5px;}
+#update_details li:first-child{ margin:0 0 0 5px;}
+#update_details li:last-child{ margin:0 5px 0 0;}
+#update_details ul{overflow:hidden; margin:0 0 20px 0; padding:0;}
+
+
+/*FLIGHT SEARCH*/
+.top_search_btn{ width:100%; -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px; border:1px solid #97989c; overflow:hidden;}
+.top_search_btn a{color:#97989c;}
+.top_search_btn .active a{ color:#fff;}
+.top_search_btn_right{ width:49.5%; float:right; border-left: 1px solid #97989c;  text-align:center; padding:3px 0;}
+.top_search_btn_left{ width:50%; float:left; text-align:center; padding:3px 0;}
+.top_search_btn .active{ background:#00a8e9;}
+.form_with_radio {
+	max-width: 100%;
+	overflow: hidden; float:right;
+}
+.radioBtn{ width:48%; float:right; margin:20px 2px 5px;}
+.form_with_radio input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+	-moz-opacity: 0;
+	-webkit-opacity: 0;
+	-o-opacity: 0;
+	background: rgba(255,255,255,1.00); width:20%;
+}
+.form_with_radio input[type="radio"] + label {
+	position: relative; float:right;
+	padding: 0 0 0 13px;
+	font-size: 19px;
+	line-height: 25px;
+	margin: 0 0 10px 0;
+}
+.form_with_radio input[type="radio"] + label:before {
+	content: "";
+	display: block;
+	float: right;
+	margin-left: 7px;
+	margin-top: 4px;
+	top: 2px;
+	height: 20px;
+	width: 20px;
+	background:url(../images/checkbox.png) no-repeat;
+}
+.form_with_radio input[type="radio"]:checked + label:before {
+	background:url(../images/checkbox_checked.png) no-repeat;
+}
+input.alignRight{ text-align:right; margin:0 0 10px 0; font-size:24px; padding:0; width:88%; display:block;}
+input.alignRight2{ text-align:right; margin:0 0 10px 0; font-size:24px; padding:0;}
+.searchField{ color:#97989c; font-size:17px; float:right;width: 100%;
+    text-align: right;
+    padding-right: 35px;}
+.searchField2{ color:#97989c; font-size:17px; float:right;width: 100%;
+    text-align: right;}
+.searchIcon1{ background:url(../images/outGoingFlightIcon.jpg) no-repeat right -2px;}
+.searchIcon2{ background:url(../images/inComingFlightIcon.jpg) no-repeat right -2px;}
+.searchIcon3{ background:url(../images/calendarIcon.jpg) no-repeat right -2px;}
+.searchIcon4{ background:url(../images/travelers.jpg) no-repeat right -2px;}
+.numberField{ width:30%; float:right; margin:10px 9px 0 0;}
+.searchNumberField{ width:100%; float:right;color:#97989c;font-size:17px;}
+input[type=number] {
+  float: left;
+  width: 35px;
+  height: 25px;
+  padding: 0;
+  font-size: 19px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  border: 1px #d2d3d3 solid;
+  background: none;
+  outline: none;
+  pointer-events: none;margin:0; line-height: 25px;
+}
+
+span.spinner {
+  height: 25px;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+span.spinner > .sub,
+span.spinner > .add {
+  float: left;
+  display: block;
+  width: 20px;
+  height: 25px;
+  text-align: center;
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 25px;
+  color: #000;
+  border: 1px #d2d3d3 solid;
+  border-right: 0; 
+
+  cursor: pointer;
+  transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+	  border-radius: 4px 0 0 4px;
+}
+
+span.spinner > .add {
+  top: 0;
+  border: 1px #d2d3d3 solid;
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+span.spinner > .sub:hover,
+span.spinner > .add:hover {
+  background: #d2d3d3;
+  color: #25323B;
+}
+ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+ -webkit-appearance: none;
+}
+.moreDetails{ background:url(../images/moreIcon.png) no-repeat; width:18px; height:18px;    float: right;    margin: 4px 2px 12px 8px;}
+.moreDetails.Close{ background:url(../images/moreIconClose.png) no-repeat;}
+.searchMoreOptions{ color:#000; text-align:right; margin-top:10px; float:right;}
+
+.SearchResultsmoreDetails{ background:url(../images/moreIcon.png) no-repeat; width:18px; height:18px;    float: right;    margin: 0px 2px 7px 8px;}
+.SearchResultsmoreDetails.Close{ background:url(../images/moreIconClose.png) no-repeat;}
+
+/*CHECKBOX*/
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	z-index: -1000;
+	right: -1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-right: 25px;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+	background-repeat: no-repeat;
+	background-position: right 0;
+	font-size: 20px;
+	vertical-align: middle;
+	cursor: pointer; margin-right:2px;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: right -20px;
+}
+label.css-label {
+	background-image: url(../images/customeCheckbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+::-webkit-input-placeholder {
+   color: #2f2f2d;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #2f2f2d;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #2f2f2d;  
+}
+:-ms-input-placeholder {  
+   color: #2f2f2d;  
+}
+
+/*SEARCH RESULTS*/
+.orangeText{ color:#f56e0d;}
+.plainGoOrange{ background:url(../images/plainGoOrange.jpg) no-repeat right; padding-right:22px; float:right; width:35%; text-align:right;margin-bottom:10px; font-size:15px;}
+.plainBackOrange{ background:url(../images/plainBackOrange.jpg) no-repeat right; padding-right:22px; float:left; width:35%; text-align:right; margin-bottom:10px;}
+.searchPassengers{ border-top:1px solid #c4c4c4; background:#ebebeb; float:left; width:100%; text-align:right;    font-size: 17px;    padding: 10px 0;}
+.searchBox{    width: 92%;    padding: 0 4%; color:#000;}
+.resultItems{ float:left; width:100%; text-align:right;}
+.resultItems ul{ padding:0; margin:0;} 
+.resultItems li{ width:100%; list-style:none; overflow:hidden;border-bottom:1px solid #8a8a8a;}
+.resultItems li.best{ background:url(../images/bestDeal.png) no-repeat left top; border-top:1px solid #00a8e9;border-bottom:1px solid #00a8e9;}
+.resultItems li.selected{ border-top:1px solid #00a8e9;border-bottom:1px solid #00a8e9;}
+.resultItems li.cheepest{ background:url(../images/cheepestDeal.png) no-repeat left top;}
+.resultItems li.greyTitle{ background:#979797; color:#fff; border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4 ; padding:10px 0;}
+.resultItems li.greyTitle span{ padding-right:10px; font-size:13px; font-weight:bold;}
+.resultItemsTitle{ font-size:15px; font-weight:bold; color: #00a8e9; margin:10px 10px 0 0;}
+.resultItemsFlight{ float:right; width:70%; margin-top:10px;}
+.resultItemsFlight img{ height:auto; float:right; width:50px; margin-left:10px;}
+.resultItemsFlightDetails{ color:#757575; float:right; width:68%; font-size:15px;}
+.flightArrow{ margin:0 1px; width:10px; height:9px; background:url(../images/FlightArrow.jpg) no-repeat;    display: inline-block;}
+.flightArrowWithStop{ margin:0 1px; width:32px; height:16px; background:url(../images/FlightArrowWithStop.jpg) no-repeat;    display: inline-block; font-size:11px; color:#454545; text-align:center;}
+.flightMoreOptions{ color:#757575; text-align:right; margin:10px 2% 0 2%; float:right; font-size:12px; border-top: 1px solid #c4c4c4; width:96%; padding:12px 0 0px 0;}
+.resultItemsBtnLeft{ float:right; width:26%;    margin-top: -16px;}
+.resultItemsBtnLeft.singleFlight{  margin-top: 50px;}
+.resultItemsBtnLeft.singleFlight2{  margin-top: 11px;}
+.resultItemsFlight.singleFlight{  margin-top: 50px;}
+.resultItemsOrangeBtn{ width:98%; background:#f56e0d; color:#fff; text-align:center; font-size:18px; padding:0px 0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;}
+.resultItemsBluePrice{ color:#00a8e9; width:98%;font-size:18px; font-weight:bold; margin-top:24px;}
+.resultItemsGreyBtn{ width:98%; background:#c1c1c1; color:#fff; text-align:center; font-size:18px; padding:3px 0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;}
+.resultItemsGreyBtn a{ color:#fff;}
+.resultItemsOrangeBtn a{ color:#fff; }
+.resultItemsCallToOrder{width:96%; background: url(../images/phoneOrange.png) no-repeat 3px #fff; border:1px solid #f56e0d; color:#f56e0d; text-align:right; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.resultItemsCallToOrder a{ color:#f56e0d; font-size:10px; padding-right:2px;}
+.resultItemsTextUnderBtn{ color:#000; font-size:14px;}
+.MoreOptionsTitle{margin: 0; border-top: 1px solid #c4c4c4; padding: 10px 0 3px 0; float:right; width:100%;}
+.MoreOptionsTitleHotel{margin: 0; border-top: 1px solid #c4c4c4; padding: 3px 0 3px 0; float:right; width:100%;}
+.MoreOptionsTitleGoing{ float:right;background:url(../images/outGoingFlightIcon.jpg) no-repeat right; padding-right:33px; line-height:24px;}
+.MoreOptionsTitleBack{ float:right;background:url(../images/inComingFlightIcon.jpg) no-repeat right; padding-right:33px; line-height:24px;}
+.MoreOptionsTitleTime{ float:left;  font-weight:bold;}
+.MoreOptions{ float:right; width:100%;}
+.MoreOptionsSub1{    margin: 4px 0;    float: right;    display: flex; width:100%;}
+.MoreOptionsSub1 span{ margin-right:30px;display: inline-block;}
+.MoreOptionsSum{border-top: 1px solid #c4c4c4; border-bottom: 1px solid #c4c4c4; float:right; width:100%; margin:10px 0 0 0; padding:5px 0; text-align:left;}
+.MoreOptionsSum span{ color:#f56e0d; font-size:18px; font-weight:bold;}
+.MoreOptionsHotelStarts{ float:left; width:25%; text-align:left;}
+.MoreOptionsHotelName{ float:right; width:75%;}
+
+
+
+/* Tablet Layout: 481px to 768px. Inits styles from: Mobile Layout. */
+
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 100%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 100%;
+	max-width: 1232px;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+.hide_desktop {
+display: none;
+}
+}

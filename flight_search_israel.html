@@ -1,0 +1,133 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>חיפוש טיסה בארץ</title>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+  $("#header").load("header.html");
+  $("#footer").load("footer.html");
+});
+</script>
+<script>
+jQuery(document).ready(function(){
+jQuery( ".moreDetails" ).click(function() {
+jQuery( ".MoreOptions" ).toggle( "fast" );
+$( ".moreDetails" ).toggleClass( "Close" );
+
+});
+
+
+});
+</script>
+</head>
+<body>
+<div id="header"></div>
+<div class="gridContainer clearfix mainFrame">
+  <div class="fluid topGreyTitle">
+    <h1>חיפוש טיסה</h1>
+  </div>
+  <div class="fluid topCenterText">
+    <div class="top_search_btn">
+      <div class="top_search_btn_right"><a href="flight_search_oversea.html">טיסות לחו"ל</a></div>
+      <div class="top_search_btn_left active"><a href="flight_search_israel.html">טיסות בארץ</a></div>
+    </div>
+    <form id="flight_search_oversea" class="form_with_radio">
+      <div class="radioBtn">
+        <input id="radio1" type="radio" name="radio" value="1" checked="checked">
+        <label for="radio1"><span><span></span></span>הלוך ושוב</label>
+      </div>
+      <div class="radioBtn">
+        <input id="radio2" type="radio" name="radio" value="2">
+        <label for="radio2"><span><span></span></span>כיוון אחד</label>
+      </div>
+      <div class="searchField searchIcon1">מוצא
+        <input type="text" class="alignRight" name="from" placeholder="בחר">
+      </div>
+      <div class="searchField searchIcon2">יעד
+        <input type="text" class="alignRight" name="destination" placeholder="בחר">
+      </div>
+      <div class="searchField searchIcon3">יציאה
+        <input type="text" class="alignRight" name="destination" placeholder="בחר">
+      </div>
+      <div class="searchField searchIcon3">חזרה
+        <input type="text" class="alignRight" name="destination" placeholder="בחר">
+      </div>
+      <div class="searchField searchIcon4">הרכב הנוסעים</div>
+      <div class="searchNumberField">
+        <div class="numberField">מבוגר<br>
+          <input type="number" min="1" max="10" value="1" />
+        </div>
+        <div class="numberField">ילד<br>
+          <input type="number" min="1" max="10" value="1" />
+        </div>
+        <div class="numberField">תינוק<br>
+          <input type="number" min="1" max="10" value="1" />
+        </div>
+      </div>
+      <div class="searchMoreOptions">אפשרויות נוספות  <div class="moreDetails"></div>
+      <!-- <div class="MoreOptions" style="display:none"> -->
+      <div class="MoreOptions" >
+           <div class="searchField2">תושב אילת
+            <input type="text" class="alignRight2" name="eilat" placeholder="הזן מספר">
+          </div>
+           <div class="searchField2">תיק תק
+            <input type="text" class="alignRight2" name="tiktak" placeholder="הזן מספר">
+          </div>
+          
+          <div class="CustomCheckbox">
+           <input type="checkbox" name="checkbox" id="checkbox" class="css-checkbox" /><label for="checkbox" class="css-label">הצג רק טיסות התואמות למס’ תיק תק</label>
+         </div>
+
+
+       </div>
+      </div>
+    </form>
+    <script>
+(function($) {
+$.fn.spinner = function() {
+this.each(function() {
+var el = $(this);
+
+// add elements
+el.wrap('<span class="spinner"></span>');     
+el.before('<span class="sub">-</span>');
+el.after('<span class="add">+</span>');
+
+// substract
+el.parent().on('click', '.sub', function () {
+if (el.val() > parseInt(el.attr('min')))
+el.val( function(i, oldval) { return --oldval; });
+});
+
+// increment
+el.parent().on('click', '.add', function () {
+if (el.val() < parseInt(el.attr('max')))
+el.val( function(i, oldval) { return ++oldval; });
+});
+    });
+};
+})(jQuery);
+
+$('input[type=number]').spinner();
+</script> 
+  </div>
+  <div class="fluid footerBtn"> <a href="#">
+    <div class="continueBtn">מצא טיסה</div>
+    </a> </div>
+</div>
+<!--Footer-->
+<div id="footer"></div>

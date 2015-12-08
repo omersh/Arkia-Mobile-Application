@@ -1,0 +1,38 @@
+<script>
+jQuery(document).ready(function(){
+jQuery( ".menu" ).click(function() {
+jQuery( ".side_menu" ).toggle( "fast" );
+});
+
+jQuery( "#menu_cross" ).click(function() {
+jQuery( ".side_menu" ).hide( "slow" );
+});
+
+});
+</script>
+
+<div class="gridContainer clearfix">
+<div class="fluid">
+<header>   
+   <header class="fluid header">
+      <div class="HeaderLogin"><div class="loginBtn"><a href="#"><img src="images/Login.png" alt=""/><br>כניסה לחשבון</a></div></div>
+      <div class="Logo"><a href="home.html"><img src="images/ArkiaLogo.png" alt=""/></a></div>
+      <div class="menu"><img src="images/menu.png" alt=""/></div>
+   </header>
+     
+     <!------------------- Side Menu ------------------------>
+		<div class="side_menu" style="display:none">
+			<!--<div id="menu_cross"><img src="images/CloseMenu.png"></div>-->
+			<ul class="side_menu_list">
+				<li><a href="ishur_tisa.html"><div class="menuIcon menu1"></div> אישרור הזמנה</a></li>
+				<li><a href="Itur_azmana.html"><div class="menuIcon menu2"></div> איתור הזמנה</a></li>
+				<li><a href="#"><div class="menuIcon menu3"></div> תנאי שימוש באפליקציה</a></li>
+				<li><a href="#"><div class="menuIcon menu4"></div>מדיניות פרטיות</a></li>
+				<li><a href="#"><div class="menuIcon menu5"></div> צור קשר</a></li>
+				<li><a href="#"><div class="menuIcon menu6"></div> צ'ק אין</a></li>
+				<li><a href="#"><div class="menuIcon menu7"></div> תקנון</a></li>
+			</ul>
+		</div>
+		<!------------------- /Side Menu ------------------------> 
+        
+</header>
